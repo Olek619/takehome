@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: olek619/project_two
+          tags: olek619/takehome
