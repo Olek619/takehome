@@ -44,3 +44,8 @@ def test_obj_hex2bgr_invalid_complex():
     with pytest.raises(AttributeError):
         hex2bgr(2 + 3j)
 
+
+
+# I'm expecting an error her
+def test_hex2bgr_error():
+    assert hex2bgr("#FF0000FGS") != (0, 0, 255)
