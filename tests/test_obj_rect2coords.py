@@ -17,19 +17,16 @@ def test_obj_rect2coords(obj_definition, expected):
     assert obj_rect2coords(obj_definition) == expected
 
 
-# Test for invalid input (missing keys)
 def test_obj_rect2coords_invalid_input():
     with pytest.raises(KeyError):
         obj_rect2coords({'top': 10, 'left': 20, 'width': 30, 'height': 40, 'scaleX': 1, 'angle': 0})
 
 
-# Test for invalid input (non-numeric values)
 def test_obj_rect2coords_non_numeric_input():
     with pytest.raises(ValueError):
         obj_rect2coords({'top': 'abc', 'left': 20, 'width': 30, 'height': 40, 'scaleX': 1, 'scaleY': 1, 'angle': 0})
 
 
-# Test for invalid input (negative width or height)
 def test_obj_rect2coords_empty_dimension():
     with pytest.raises(ValueError):
         obj_rect2coords({'top': '', 'left': 20, 'width': -30, 'height': 40, 'scaleX': 1, 'scaleY': 1, 'angle': 0})
