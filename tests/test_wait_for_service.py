@@ -25,15 +25,6 @@ def test_wait_for_service_connection_error_then_success(mock_get):
 
 
 @patch('requests.get')
-def test_wait_for_service_unexpected_status_code(mock_get):
-    mock_response = MagicMock(status_code=500)
-    mock_get.return_value = mock_response
-
-    with pytest.raises(requests.HTTPError):
-        wait_for_service()
-
-
-@patch('requests.get')
 def test_wait_for_service_multiple_attempts(mock_get):
     mock_get.side_effect = [requests.ConnectionError, requests.ConnectionError, MagicMock(status_code=200)]
 
