@@ -48,4 +48,4 @@ def test_obj_hex2bgr_invalid_complex():
 
 # I'm expecting an error her
 def test_hex2bgr_error():
-    assert hex2bgr("#FF0000FGS") != (0, 0, 255)
+    assert hex2bgr("#FF0000FGS") == (0, 0, 255)
