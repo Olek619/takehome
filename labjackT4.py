@@ -2,7 +2,7 @@ import time
 from labjack import ljm
 
 
-class LabJackFixture:
+class LabJackT4Fixture:
     def __init__(self):
         self.handle = ljm.openS("T4", "ANY", "ANY")
         if self.handle is None:
@@ -24,7 +24,7 @@ class LabJackFixture:
 
 
 def test_labjack_fixture():
-    labjack = LabJackFixture()
+    labjack = LabJackT4Fixture()
     labjack.toggle_output_pin()
     input_state = labjack.read_input_pin_state()
     assert input_state == 0
