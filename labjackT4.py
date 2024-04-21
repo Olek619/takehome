@@ -34,4 +34,6 @@ def test_labjack_fixture():
 # Set up CI/CD and connect LabJack T4, correct environment and configuration.
 # Install all necessary dependency, drivers, and software in order to communicate with LabJack T4.
 # Set up loggers and notifications.
+# Execute test(s)
+# Report results
 # Data clean up - clean all data from LabJack T4.
